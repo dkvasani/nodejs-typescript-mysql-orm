@@ -4,7 +4,7 @@ import entities from "./entity/index";
 
 import * as dotenv from "dotenv";
 
-const { Blog } = entities;
+const { Blog, User } = entities;
 
 dotenv.config();
 
@@ -38,7 +38,7 @@ class DBConfig {
       username: DB_USER_DEV,
       password: DB_PASSWORD_DEV,
       host: DB_HOST_DEV,
-      entities: [Blog],
+      entities: [Blog, User],
       logging: false,
       synchronize: true,
     });
