@@ -20,12 +20,12 @@ class UserServices {
   };
 
   /**
-   * Find one blog
+   * Find one user
    * @author Dharmesh Vasani
    * @param {}
    * @returns Promise
    */
-  findOneBlog = async (user_id: number): Promise<any | null> => {
+  findOneUser = async (user_id: number): Promise<any | null> => {
     const result = await User.findOne({ user_id });
 
     if (!result) {
@@ -50,12 +50,12 @@ class UserServices {
   };
 
   /**
-   * Update a blog by Id
+   * Update a user by Id
    * @author Dharmesh Vasani
    * @param data
    * @returns Promise
    */
-  updateBlog = async (user_id: number, data: object): Promise<any | null> => {
+  updateUser = async (user_id: number, data: object): Promise<any | null> => {
     const result = await User.update(user_id, data);
 
     if (!result) {
@@ -70,7 +70,7 @@ class UserServices {
    * @param data
    * @returns Promise
    */
-  deleteBlog = async (user_id: number): Promise<any | null> => {
+  deleteUser = async (user_id: number): Promise<any | null> => {
     const result = await User.delete({ user_id });
 
     if (!result) {

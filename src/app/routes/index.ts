@@ -26,6 +26,7 @@ class Routes {
 
 
     app.post("/user/register", User.createUser);
+    app.post("/user/login", User.userLogin);
 
     app.get("/blogs", Auth.authorize(['blogs']), Blog.findBlogs);
     app.get("/blogs/:blog_id", Blog.findOneBlog);
